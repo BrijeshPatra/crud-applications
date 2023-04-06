@@ -12,24 +12,27 @@ public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long deptId;
-    private String deptName;
+    private String departmentName;
     private String deptAddress;
     private String deptCode;
 
-    public Department(Long deptId, String deptName, String deptAddress, String deptCode) {
+
+    public Department(Long deptId, String departmentName, String deptAddress, String deptCode) {
         this.deptId = deptId;
-        this.deptName = deptName;
+        this.departmentName = departmentName;
         this.deptAddress = deptAddress;
         this.deptCode = deptCode;
     }
-    public Department(){
+
+    public Department() {
 
     }
+
     @Override
     public String toString() {
         return "DepartmentEntity{" +
                 "deptId=" + deptId +
-                ", deptName='" + deptName + '\'' +
+                ", deptName='" + departmentName + '\'' +
                 ", deptAddress='" + deptAddress + '\'' +
                 ", deptCode='" + deptCode + '\'' +
                 '}';
